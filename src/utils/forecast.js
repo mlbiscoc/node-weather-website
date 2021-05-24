@@ -8,7 +8,7 @@ const forcast = (x, y, callback) => {
         } else if (body.error) {
             callback('Unable to find weather from location', undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + " It is currently " + body.current.temperature + " degrees F and feels like " + body.current.feelslike)
+            callback(undefined, body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degrees F and feels like " + body.current.feelslike + ". The local time is " + body.location.localtime)
         }
     })
 }
